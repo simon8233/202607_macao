@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="description" content="澳門·深圳 2026.07.12–19 行程 · Jonathan" />
+  <title>澳門深圳 9 日行程</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧳%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="badge">PI · ITINERARY</span>
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="切換深淺色">◐</button>
+      </div>
+      <h1>澳門特別行政區 · 深圳市</h1>
+      <p class="subtitle">8 天 7 晚 · 07.12–07.19</p>
+      <p class="meta">Jonathan · 71 + 7 歲同行 · 全程預期出租車</p>
+      <div class="chips">
+        <span class="chip lock">滑雪已付費</span>
+        <span class="chip lock">南謠已付費</span>
+        <span class="chip">科技館不排</span>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="主選單">
+      <button type="button" class="tab active" data-tab="days" role="tab" aria-selected="true">每日</button>
+      <button type="button" class="tab" data-tab="food" role="tab" aria-selected="false">用餐</button>
+      <button type="button" class="tab" data-tab="backup" role="tab" aria-selected="false">備選</button>
+      <button type="button" class="tab" data-tab="tips" role="tab" aria-selected="false">注意</button>
+    </nav>
+
+    <main>
+      <!-- 每日 -->
+      <section id="panel-days" class="panel active" role="tabpanel">
+        <div class="day-scroll" id="dayNav" aria-label="選擇日期"></div>
+        <div id="dayContent"></div>
+      </section>
+
+      <!-- 用餐總表 -->
+      <section id="panel-food" class="panel" role="tabpanel" hidden>
+        <div class="section-head">
+          <h2>用餐整理</h2>
+          <p>已訂位標示清楚；其餘為建議主選／備選</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="foodTable">
+            <thead>
+              <tr>
+                <th>日期</th>
+                <th>早</th>
+                <th>午</th>
+                <th>晚</th>
+                <th>訂位</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="card soft">
+          <h3>飯店附近早餐（前海會展／冰雪世界）</h3>
+          <ul class="bullet-list" id="breakfastList"></ul>
+        </div>
+      </section>
+
+      <!-- 備選 -->
+      <section id="panel-backup" class="panel" role="tabpanel" hidden>
+        <div class="section-head">
+          <h2>備選景點</h2>
+          <p>主軸不變時可塞入的選項 · 含建議時長</p>
+        </div>
+        <div id="backupList"></div>
+        <div class="section-head tight">
+          <h3>哪天還有空位？</h3>
+        </div>
+        <div id="slotList"></div>
+      </section>
+
+      <!-- 注意 -->
+      <section id="panel-tips" class="panel" role="tabpanel" hidden>
+        <div class="section-head">
+          <h2>注意事項</h2>
+        </div>
+        <div class="card">
+          <h3>鎖定不可動</h3>
+          <ul class="bullet-list">
+            <li>滑雪兩天：<strong>10:00–14:00</strong>（已付費）</li>
+            <li>南謠逸境：<strong>17:00 前抵達</strong>晚宴（已付費）</li>
+            <li>贏到粥：週五 <strong>17:30</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>交通假設</h3>
+          <ul class="bullet-list">
+            <li>全程<strong>出租車</strong>；表列為平常車程粗估</li>
+            <li>塞車請自行 <strong>+15～30 分</strong></li>
+            <li>過關（深→澳）常需 <strong>1.5～2.5 小時+</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>週三決策點</h3>
+          <p class=" pro">滑雪後 14:00 回房休息，再決定：</p>
+          <ul class="bullet-list">
+            <li><strong>A</strong> 體力尚可 → 平安云際黃昏</li>
+            <li><strong>B</strong> 很累 → 前海壹方城輕鬆</li>
+            <li><strong>C</strong> 中等 → 平安快速打卡或只逛壹方城</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>車程速查</h3>
+          <div class="table-wrap">
+            <table class="data-table compact" id="taxiTable">
+              <thead><tr><th>區間</th><th>約略</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <p class="footer-note">加到主畫面：Safari／Chrome → 分享 → 加入主畫面</p>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

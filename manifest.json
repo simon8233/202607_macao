@@ -1,0 +1,18 @@
+{
+  "name": "澳門深圳 9 日行程",
+  "short_name": "行程 7月",
+  "description": "Jonathan 2026.07.12–19 澳門·深圳行程",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f0f7f6",
+  "theme_color": "#0f766e",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230f766e' width='100' height='100' rx='20'/%3E%3Ctext y='.9em' font-size='64' x='18'%3E🧳%3C/text%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
